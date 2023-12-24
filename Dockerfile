@@ -26,8 +26,8 @@ COPY --link  . .
 # Uncomment the following line in case you want to disable telemetry during the build.
 # ENV NEXT_TELEMETRY_DISABLED 1
 
-ENV UPLOADTHING_SECRET=sk_live_22c3ba1404e3fccac5a2d8cc2f841f7845b8657f4db89ed2188b4043b1eabf77
-ENV UPLOADTHING_APP_ID=hosc1papr7
+#ENV UPLOADTHING_SECRET=
+#ENV UPLOADTHING_APP_ID=
 
 RUN npm run build
 
@@ -54,8 +54,8 @@ EXPOSE 3000
 ENV PORT 3000
 # ENV HOSTNAME localhost
 ENV NODE_ENV=production
-ENV UPLOADTHING_SECRET=sk_live_22c3ba1404e3fccac5a2d8cc2f841f7845b8657f4db89ed2188b4043b1eabf77
-ENV UPLOADTHING_APP_ID=hosc1papr7
+#ENV UPLOADTHING_SECRET=
+#ENV UPLOADTHING_APP_ID=
 
 # Allow the running process to write model files to the cache folder.
 # NOTE: In practice, you would probably want to pre-download the model files to avoid having to download them on-the-fly.
