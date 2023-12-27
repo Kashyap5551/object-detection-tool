@@ -1,14 +1,19 @@
 import { utapi } from "@/utils/uploadthing";
 import { pipeline } from "@xenova/transformers";
 import { count } from "console";
+import { put } from "@vercel/blob";
+import { NextResponse } from "next/server";
 
 export async function POST(req: Request, res: Response) {
   //get upload url from upload thing
   const formData = await req.formData();
-  const files = formData.getAll("files");
-  const response = await utapi.uploadFiles(files);
-  const responseData = response[0].data;
-  const url = responseData?.url;
+  const files = formData.get("files") as File;
+  const blob = await put(files.name, files, {
+    access: "public",
+  });
+  //const response = await utapi.uploadFiles(files);
+  //const responseData = response[0].data;
+  const url = blob.url;
 
   //detect obj using onx local model
   const detector = await pipeline("object-detection", "Xenova/detr-resnet-50");
