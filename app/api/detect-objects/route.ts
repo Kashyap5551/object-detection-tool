@@ -14,6 +14,7 @@ export async function POST(req: Request, res: Response) {
   //const response = await utapi.uploadFiles(files);
   //const responseData = response[0].data;
   const url = blob.url;
+  console.log(url);
 
   //detect obj using onx local model
   const detector = await pipeline("object-detection", "Xenova/detr-resnet-50");
