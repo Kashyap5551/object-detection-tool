@@ -45,26 +45,26 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 2. **Install dependencies:**
 
-  ```bash
-  npm install
-  ```
+   ```bash
+   npm install
+   ```
 
 
 3. **Set up environment variables:**
 
 Create a `.env.local` file in the root of your project and add the following:
 
-```bash
-HUGGING_FACE_API_KEY=your_hugging_face_api_key
-UPLOADTHING_API_KEY=your_uploadthing_api_key
-```
+   ```bash
+   HUGGING_FACE_API_KEY=your_hugging_face_api_key
+   UPLOADTHING_API_KEY=your_uploadthing_api_key
+   ```
 Replace `your_hugging_face_api_key` and `your_uploadthing_api_key` with the actual API keys obtained from Hugging Face and UploadThing.
 
 4. **Run the application on your localhost:**
 
-```bash
-npm run dev
-```
+   ```bash
+   npm run dev
+   ```
 The application will be accessible at `http://localhost:3000`.
 
 ## Deployment
